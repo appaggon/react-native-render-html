@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { View, StyleSheet, StyleProp, ViewStyle } from 'react-native';
 import RenderHTML, {
   RenderersPropsBase,
@@ -73,7 +73,7 @@ const UIHtmlDisplayMolecule = React.memo(
     };
     const sharedProps = {
       ...DEFAULT_PROPS,
-      onLinkPress,
+      onLinkPress: useCallback((e, uri) => onLinkPress(uri), [onLinkPress]),
       contentWidth,
       ...(renderHtmlProps as any),
       defaultTextProps: {
