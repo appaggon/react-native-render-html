@@ -8009,6 +8009,7 @@ fsevents@~2.1.2:
   peerDependencies:
     react: "*"
     react-native: "*"
+    react-native-fast-image: "*"
   languageName: unknown
   linkType: soft
 

@@ -42,7 +42,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-fast-image": "*"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.8",

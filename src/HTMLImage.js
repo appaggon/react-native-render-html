@@ -7,6 +7,8 @@ import {
   TouchableHighlight,
 } from "react-native";
 import PropTypes from "prop-types";
+import FastImage from 'react-native-fast-image';
+
 
 const defaultImageStyle = { resizeMode: "cover" };
 const emptyObject = {};
@@ -403,7 +405,7 @@ const HTMLImageElement = class HTMLImageElement extends PureComponent {
   renderImage(imageBoxDimensions, imageStyles) {
     const { source } = this.props;
     return (
-      <Image
+      <FastImage
         source={source}
         onError={() => this.setState({ error: true })}
         style={[defaultImageStyle, imageBoxDimensions, imageStyles]}
